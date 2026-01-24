@@ -10,7 +10,9 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Fordelen med å bruke Docker er at PostgreSQL kjører i en isolert container uavhengig av operativsystemet. 
+Alle studenter får nøyaktig samme versjon og konfigurasjon av databasen, noe som reduserer problemer knyttet til ulike OS, versjoner og lokale installasjoner. 
+Docker gjør det også enkelt å starte, stoppe og slette databasen uten å påvirke resten av systemet.
 
 ---
 
@@ -18,7 +20,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Et persistent volum betyr at dataene lagres utenfor selve containeren, slik at de ikke forsvinner når containeren stoppes eller slettes. Dette er viktig fordi databasedata ellers ville blitt borte hver gang containeren restartes.
 
 ---
 
@@ -26,7 +28,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Når man kjører docker-compose down, stoppes og fjernes containerne, men dataene beholdes så lenge de er lagret i et persistent volum. 
+Dataene slettes bare hvis man eksplisitt bruker docker-compose down -v.
 
 ---
 
@@ -34,13 +37,14 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Første gang docker-compose up -d kjøres, laster Docker ned nødvendige images, oppretter containere, setter opp nettverk og kjører init-skriptene som initialiserer databasen med testdata. 
+Andre gang brukes allerede eksisterende images, containere og volum, og databasen starter raskere uten å bli initialisert på nytt.
 
 ---
 
 ### Spørsmål 5: Hvordan ville du delt docker-compose.yml-filen med en annen student? Hvilke sikkerhetshensyn må du ta?
 
-**Ditt svar:**
+Docker-compose.yml-filen kan deles via GitHub som en del av et repository. Det er viktig å passe på at sensitive opplysninger som passord, brukernavn eller hemmelige nøkler ikke eksponeres. I stedet bør slike verdier lagres i miljøvariabler eller i en .env-fil som ikke pushes til GitHub.
 
 [Skriv ditt svar her]
 
