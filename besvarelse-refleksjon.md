@@ -56,7 +56,7 @@ Docker-compose.yml-filen kan deles via GitHub som en del av et repository. Det e
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+INNER JOIN returnerer bare rader med treff i begge tabeller, mens LEFT JOIN også tar med rader uten treff fra venstre tabell.
 
 ---
 
@@ -64,7 +64,7 @@ Docker-compose.yml-filen kan deles via GitHub som en del av et repository. Det e
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Fremmednøkler sikrer referanseintegritet, og sletting vil feile (eller kaskadere) hvis studenter fortsatt er knyttet til programmet.
 
 ---
 
@@ -72,15 +72,14 @@ Docker-compose.yml-filen kan deles via GitHub som en del av et repository. Det e
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
-
+GROUP BY grupperer rader slik at aggregatfunksjoner som COUNT og AVG kan beregnes per gruppe.
 ---
 
 ### Spørsmål 4: Hva er en indeks og hvorfor er den viktig for ytelse?
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+En indeks gjør oppslag raskere ved å redusere hvor mye data databasen må lese.
 
 ---
 
@@ -88,8 +87,7 @@ Docker-compose.yml-filen kan deles via GitHub som en del av et repository. Det e
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
-
+Jeg ville analysert spørringen med EXPLAIN og lagt til riktige indekser.
 ---
 
 ## Oppgave 3: Brukeradministrasjon og GRANT
@@ -98,40 +96,35 @@ Docker-compose.yml-filen kan deles via GitHub som en del av et repository. Det e
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
-
+Prinsippet betyr at brukere kun får rettigheter de trenger, noe som reduserer sikkerhetsrisiko.
 ---
 
 ### Spørsmål 2: Hva er forskjellen mellom en bruker og en rolle i PostgreSQL?
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
-
+En bruker er en rolle som kan logge inn, mens en rolle brukes til å samle rettigheter.
 ---
 
 ### Spørsmål 3: Hvorfor er det bedre å bruke roller enn å gi rettigheter direkte til brukere?
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
-
+Roller gjør rettighetsstyring enklere og mer oversiktlig.
 ---
 
 ### Spørsmål 4: Hva skjer hvis du gir en bruker `DROP` rettighet? Hvilke sikkerhetsproblemer kan det skape?
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
-
+Brukeren kan slette tabeller eller databaser, noe som kan føre til datatap.
 ---
 
 ### Spørsmål 5: Hvordan ville du implementert at en student bare kan se sine egne karakterer, ikke andres?
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
-
+Jeg ville brukt Row-Level Security med en policy basert på studentens ID.
 ---
 
 ## Notater og observasjoner
@@ -144,19 +137,19 @@ Bruk denne delen til å dokumentere interessante funn, problemer du møtte, elle
 ## Oppgave 4: Brukeradministrasjon og GRANT
 
 1. **Hva er Row-Level Security og hvorfor er det viktig?**
-   - Svar her...
+   - RLS begrenser hvilke rader en bruker kan se, noe som gir bedre datasikkerhet.
 
 2. **Hva er forskjellen mellom RLS og kolonnebegrenset tilgang?**
-   - Svar her...
+   - RLS styrer hvilke rader som er synlige, mens kolonnebegrensning styrer hvilke felt som er tilgjengelige.
 
 3. **Hvordan ville du implementert at en student bare kan se karakterer for sitt eget program?**
-   - Svar her...
+   - Jeg ville brukt en RLS-policy som filtrerer på program_id
 
 4. **Hva er sikkerhetsproblemene ved å bruke views i stedet for RLS?**
-   - Svar her...
+   - Views kan omgås ved direkte tilgang til tabeller hvis rettigheter er feil satt.
 
 5. **Hvordan ville du testet at RLS-policyer fungerer korrekt?**
-   - Svar her...
+   - Jeg ville logget inn som ulike brukere og verifisert hvilke rader som er synlige.
 
 ---
 
