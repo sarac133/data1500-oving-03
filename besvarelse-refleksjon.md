@@ -150,7 +150,6 @@ Bruk denne delen til å dokumentere interessante funn, problemer du møtte, elle
 
 5. **Hvordan ville du testet at RLS-policyer fungerer korrekt?**
    - Jeg ville logget inn som ulike brukere og verifisert hvilke rader som er synlige.
-
 ---
 
 ## Referanser
